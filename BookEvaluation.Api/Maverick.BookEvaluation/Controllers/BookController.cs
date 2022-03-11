@@ -12,21 +12,21 @@ namespace Maverick.BookEvaluation.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            return View();
+            return Ok(GetTestListOfBooks());
         }
 
         [Route("{id}")]
         [HttpGet]
         public IActionResult Get(int id)
         {
-            return View();
+            return null;
         }
 
         [Route("create")]
         [HttpGet]
         public IActionResult Create()
         {
-            return View();
+            return Ok();
         }
 
         [Route("create")]
@@ -36,11 +36,11 @@ namespace Maverick.BookEvaluation.Controllers
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                return Ok();
             }
             catch
             {
-                return View();
+                return Ok();
             }
         }
 
@@ -48,7 +48,7 @@ namespace Maverick.BookEvaluation.Controllers
         [HttpGet]
         public IActionResult Edit(int id)
         {
-            return View();
+            return Ok();
         }
 
         [Route("edit/{id}")]
@@ -58,11 +58,11 @@ namespace Maverick.BookEvaluation.Controllers
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                return Ok();
             }
             catch
             {
-                return View();
+                return Ok();
             }
         }
 
@@ -73,11 +73,11 @@ namespace Maverick.BookEvaluation.Controllers
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                return Ok();
             }
             catch
             {
-                return View();
+                return Ok();
             }
         }
 
